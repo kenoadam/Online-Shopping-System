@@ -1,71 +1,44 @@
 # Online Shopping System in C++
 
-#### Video Demo: [Insert your YouTube video URL here]
+Video Demo: [Insert your YouTube video URL here]
 
-#### Author: Adam Johnson 
-#### GitHub: kenoadam 
-#### Location: Kenosha USA  
-#### Date Recorded: 06/16/2025
+Author: Adam Johnson  
+GitHub: kenoadam  
+Location: Kenosha, USA  
+Date Recorded: 06/16/2025
 
----
 
-## 📦 Description
 
-This is a **console-based online shopping system in C++** that simulates a basic e-commerce experience with the following core features:
+## Description
 
-- A catalog of products that users can browse.
-- A shopping cart that tracks products and quantities.
-- Multiple user types (Regular, Premium, VIP) with varying benefits.
-- A secure, thread-safe checkout process using multithreading and mutexes to simulate multiple users interacting concurrently.
+This project is a console-based online shopping system written in C++. It simulates a simplified e-commerce platform with features such as:
 
-Users begin by selecting a role and entering their name. The system then presents a menu-driven interface that allows them to view available products, add them to their cart, and proceed to checkout. At checkout, product stock is updated accordingly, and the final bill reflects any applicable user discounts.
+- A product catalog with names, descriptions, prices, and stock quantities.
+- A shopping cart that allows users to add items and check totals.
+- Three types of users (Regular, Premium, VIP) with different discount levels.
+- A thread-safe checkout system using mutexes to protect shared resources.
 
----
+Users begin by entering their name and selecting a user type. They can then browse a product menu, add items to their cart, and confirm checkout. Discounts are applied based on user type.
 
-## 📁 Files
 
-- **main.cpp**:  
-  The core source file containing all class definitions, the main shopping loop, and multithreaded execution logic.
 
----
+## Files Included
 
-## ⚙️ Features
+- main.cpp – Contains all class definitions, the interactive menu system, and the main function. This is the complete application in one file.
 
-- **Product Management**  
-  Each `Product` has a name, description, price, and stock quantity. Users can view product info and attempt purchases.
 
-- **User Types via Inheritance**  
-  - `User`: Base class with name and email.
-  - `RegularUser`: No discount.
-  - `PremiumUser`: 10% discount.
-  - `VIPUser`: 20% discount.
 
-- **Thread Safety**  
-  Product stock is protected using `std::mutex` and `std::lock_guard`, simulating realistic concurrent shopping scenarios.
+## Project Features
 
-- **Interactive Menu System**  
-  Text-based UI that walks users through browsing, adding to cart, and checking out.
+- Encapsulation: All class attributes are private and accessed through public member functions.
+- Inheritance and Polymorphism: User roles are implemented using class inheritance, with discounts handled through polymorphic methods.
+- Multithreading Support: The system uses mutexes to safely update shared inventory in simulated concurrent scenarios.
+- Input Validation: The system checks user input to prevent errors and ensure smooth interaction.
 
-- **Encapsulation and Clean OOP Design**  
-  All attributes are private, with access controlled through public member functions.
 
----
 
-## 💡 Design Justifications
+## How to Compile and Run
 
-- **Polymorphism** allows clean separation of behavior by user type.
-- **Multithreading** adds realism and demonstrates concurrency control.
-- **Encapsulation** protects internal state and enforces abstraction.
-- **Menu-driven input** simplifies user experience and aligns with GeeksforGeeks best practices.
-
----
-
-## 🖥️ How to Compile and Run
-
-### Step 1: Clone or Download
-Clone this repository or download the project files manually.
-
-### Step 2: Compile
-Using g++:
+### Compile (using g++)
 ```bash
 g++ -std=c++11 -pthread main.cpp -o shopping_app
