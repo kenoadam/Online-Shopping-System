@@ -1,11 +1,11 @@
 # Online Shopping System in C++
 
-Video Demo: [Insert your YouTube video URL here]
+Video Demo: https://youtu.be/6g1uXgwqu54
 
 Author: Adam Johnson  
 GitHub: kenoadam  
 Location: Kenosha, USA  
-Date Recorded: 06/16/2025
+Date Recorded: 06/20/2025
 
 
 
